@@ -1,0 +1,15 @@
+<div class="col-lg-4 col-sm-6 portfolio-item">
+  <div class="card h-100" >
+    <a [routerLink]="'/movies/' + movie.MaPhim"><img class="card-img-top" [src]="movie.HinhAnh"></a>
+    <div class="card-body">
+      <h4 class="card-title">
+        <a [routerLink]="'/movies/' + movie.MaPhim">{{ movie.TenPhim }}</a>
+      </h4>
+      <button class="btn btn-block"
+        [ngClass]="(movie.MaPhim % 2 === 0) ? 'btn-success' : 'btn-danger'"
+      >
+        Buy Ticket
+      </button>
+    </div>
+  </div>
+</div>

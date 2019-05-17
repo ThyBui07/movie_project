@@ -1,0 +1,23 @@
+<div class="container">
+  <sub-heading-component></sub-heading-component>
+  <bread-crumb-component></bread-crumb-component>
+  <div class="row" *ngIf="movie">
+
+    <div class="col-md-4">
+      <img class="img-fluid h-100" [src]="movie.HinhAnh">
+    </div>
+
+    <div class="col-md-8">
+      <h3 class="my-3">{{movie.TenPhim}}</h3>
+      <p>{{movie.MoTa}}</p>
+      <h3 class="my-3"></h3>
+      <ul>
+        <li>Lorem Ipsum</li>
+        <li>Dolor Sit Amet</li>
+        <li>Consectetur</li>
+        <li>Adipiscing Elit</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
