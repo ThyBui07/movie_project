@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
     { text: 'Movies', url: '/movies' },
     { text: 'News', url: '/news' },
     { text: 'About', url: '/about' },
-    { text: 'Contact', url: '/contact' },
+    { text: 'Contact', url: '/contact' }
   ];
 
   constructor() { }

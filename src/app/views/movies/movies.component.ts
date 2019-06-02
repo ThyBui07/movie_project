@@ -20,11 +20,11 @@ export class MoviesComponent implements OnInit {
   getList() {
     this.movieService.list().then((res) => {
       this.movies = res;
-      // console.log(res);
-    });
-    this.userService.list().then((res) => {
       console.log(res);
     });
+    // this.userService.list().then((res) => {
+    //   console.log(res);
+    // });
   }
 
 }

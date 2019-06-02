@@ -16,6 +16,10 @@ import { BreadCrumbComponent } from './components/bread-crumb/bread-crumb.compon
 import { NewsComponent } from './views/news/news.component';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { MovieDetailComponent } from './views/movie-detail/movie-detail.component';
+import { BookingComponent } from './views/booking/booking.component';
+import { MovieSeatComponent } from './components/movie-seat/movie-seat.component';
+import { AdminComponent } from './views/admin/admin.component';
+import { FormComponent } from './views/form/form.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { MovieDetailComponent } from './views/movie-detail/movie-detail.componen
     BreadCrumbComponent,
     NewsComponent,
     MovieCardComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    BookingComponent,
+    MovieSeatComponent,
+    AdminComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,

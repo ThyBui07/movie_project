@@ -3,18 +3,6 @@
   <bread-crumb-component></bread-crumb-component>
   <!-- body -->
   <div class="row">
-    <!-- <div class="col-lg-4 col-sm-6 portfolio-item" *ngFor="let movie of movies">
-      <div class="card h-100" >
-        <a [routerLink]="'movie/' + movie.imdbID"><img class="card-img-top" [src]="movie.Poster"></a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a [routerLink]="'movie/' + movie.imdbID">{{ movie.Title }}</a>
-          </h4>
-          <button class="btn btn-success btn-block">Buy Ticket</button>
-        </div>
-      </div>
-    </div> -->
-
     <div class="col-lg-4 col-sm-6 portfolio-item" *ngFor="let movie of movies">
       <div class="card h-100" >
         <a [routerLink]="'/movies/' + movie.MaPhim"><img class="card-img-top" [src]="movie.HinhAnh"></a>
@@ -22,10 +10,11 @@
           <h4 class="card-title">
             <a [routerLink]="'/movies/' + movie.MaPhim">{{ movie.TenPhim }}</a>
           </h4>
-          <button class="btn btn-success btn-block">Buy Ticket</button>
+          <button class="btn btn-success btn-block" [routerLink] ="'/booking/' + movie.MaPhim">Buy Ticket</button>
         </div>
       </div>
     </div>
+
     <!-- <movie-card-component *ngFor = "let movie of movies" [movie]="movie"></movie-card-component> -->
   </div>
 

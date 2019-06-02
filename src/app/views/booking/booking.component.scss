@@ -1,0 +1,25 @@
+.row {
+  margin-bottom: 24px;
+}
+.screen {
+  background-color: green;
+  text-align: center;
+  color: white;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.container_1 {
+  margin-top: 24px;
+  // display: flex;
+  // justify-content: center;
+  display: grid;
+  grid-template-columns: 100px auto 100px;
+
+}
+.seats {
+  justify-self: center;
+}
+.stair {
+
+}
+

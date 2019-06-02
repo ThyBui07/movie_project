@@ -31,4 +31,9 @@ export class MovieService extends ApiService {
     const uri = `QuanLyPhim/LayChiTietPhim?MaPhim=${id}`;
     return this.get(uri);
   }
+
+  seatById(id){
+    const uri = `QuanLyPhim/ChiTietPhongVe?MaLichChieu=${id}`;
+    return this.get(uri);
+  }
 }

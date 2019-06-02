@@ -1,0 +1,13 @@
+.seat{
+  background-color: #bdbaba;
+  width: 40px;
+  margin: 3px;
+  color: white;
+}
+
+.daDat{
+  background-color: red;
+  &:hover{
+      cursor: no-drop;
+  }
+}

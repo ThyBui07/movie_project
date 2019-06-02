@@ -1,0 +1,22 @@
+<!-- <button
+  class="btn seat"
+  [ngClass]="{daDat: seat.DaDat, dangChon: dangChon}"
+  [disabled]="ghe.DaDat"
+  (click)="chonVe()">
+  {{ghe.TenGhe}}
+</button> -->
+
+<button
+  class="btn seat"
+  [style.background-color]="seat.isChosen ? 'green' : '#bdbaba'"
+  [disabled]="seat.DaDat"
+  (click)="chooseSeat()">
+  {{seat.TenGhe}}
+</button>
+
+
+
+
+<!-- [ngClass]="{true:'disabled', false:'active'}[seat.DaDat]" -->
+
+<!-- [ngClass]="(movie.MaPhim % 2 === 0) ? 'btn-success' : 'btn-danger'" -->

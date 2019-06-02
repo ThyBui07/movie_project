@@ -1,0 +1,31 @@
+<div class="container">
+  <sub-heading-component></sub-heading-component>
+  <bread-crumb-component></bread-crumb-component>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="screen">SCREEN</div>
+        <div class="container_1">
+        <div class="stair">Stair</div>
+        <ng-container *ngIf="seats">
+          <div class="seats">
+            <ng-container *ngFor="let seat of seats; let i = index">
+              <movie-seat-component [seat]="seat" (seatClicked)="onChooseSeat($event)"></movie-seat-component>
+              <br *ngIf="(i + 1) % 10 == 0 " />
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="col-md-4" *ngIf="movie">
+      <h3 class="my-3">{{movie.TenPhim}}</h3>
+      <p>{{movie.MoTa}}</p>
+      <h3 class="my-3">Project Details</h3>
+      <ul>
+        <li *ngFor="let chosenSeat of chosenSeats">{{ chosenSeat.TenGhe }}: {{ chosenSeat.GiaVe }} </li>
+      </ul>
+      <h3>Total: {{ totalPrice | currency : 'VND' }} </h3>
+    </div>
+
+  </div>
+</div>
