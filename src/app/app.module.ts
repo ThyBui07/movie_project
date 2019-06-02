@@ -18,8 +18,15 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
 import { MovieDetailComponent } from './views/movie-detail/movie-detail.component';
 import { BookingComponent } from './views/booking/booking.component';
 import { MovieSeatComponent } from './components/movie-seat/movie-seat.component';
-import { AdminComponent } from './views/admin/admin.component';
 import { FormComponent } from './views/form/form.component';
+import { RegisterFormComponent } from './views/register-form/register-form.component';
+import { LoginFormComponent } from './components/header/login-form/login-form.component';
+import { SignupFormComponent } from './components/header/signup-form/signup-form.component';
+
+import { NavbarComponent } from './components/admin/navbar/navbar.component';
+import { BreadcrumbComponent } from './components/admin/breadcrumb/breadcrumb.component';
+import { ToolbarComponent } from './components/admin/toolbar/toolbar.component';
+import { AdminHomeComponent} from './views/admin/home/home.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +44,15 @@ import { FormComponent } from './views/form/form.component';
     MovieDetailComponent,
     BookingComponent,
     MovieSeatComponent,
-    AdminComponent,
     FormComponent,
+    RegisterFormComponent,
+    LoginFormComponent,
+    SignupFormComponent,
+
+    NavbarComponent,
+    BreadcrumbComponent,
+    ToolbarComponent,
+    AdminHomeComponent,
   ],
   imports: [
     BrowserModule,

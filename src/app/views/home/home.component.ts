@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
         this.sliders.push({
           name: movie.TenPhim,
           backgroundImage: `url(${movie.HinhAnh})`, //nối chuỗi
+          image: movie.HinhAnh,
         })
       });
       console.log(this.sliders);

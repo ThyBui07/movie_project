@@ -8,7 +8,9 @@ import { NewsComponent } from './views/news/news.component';
 import { MovieDetailComponent } from './views/movie-detail/movie-detail.component';
 import { BookingComponent } from './views/booking/booking.component';
 import { FormComponent } from './views/form/form.component';
+import { RegisterFormComponent } from './views/register-form/register-form.component';
 
+import { AdminHomeComponent } from './views/admin/home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +21,8 @@ const routes: Routes = [
   { path: 'news', component: NewsComponent},
   { path: 'booking/:id', component: BookingComponent},
   { path: 'login', component: FormComponent},
+  { path: 'register', component: RegisterFormComponent},
+  { path: 'admin/home', component: AdminHomeComponent },
 ];
 
 @NgModule({
