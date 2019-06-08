@@ -12,7 +12,6 @@ export class AdminGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     const currentUser = this.authenticationService.currentUserValue;
-    console.log(currentUser);
     if (currentUser && currentUser.MaLoaiNguoiDung === 'QuanTri') {
       return true;
     }

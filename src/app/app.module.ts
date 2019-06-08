@@ -22,12 +22,23 @@ import { MovieSeatComponent } from './components/movie-seat/movie-seat.component
 import { LoginFormComponent } from './components/header/login-form/login-form.component';
 import { SignupFormComponent } from './components/header/signup-form/signup-form.component';
 
+/* Admin components */
 import { NavbarComponent } from './components/admin/navbar/navbar.component';
 import { BreadcrumbComponent } from './components/admin/breadcrumb/breadcrumb.component';
 import { ToolbarComponent } from './components/admin/toolbar/toolbar.component';
-import { AdminHomeComponent} from './views/admin/home/home.component';
 import { LogoutModalComponent } from './components/admin/logout-modal/logout-modal.component';
 import { AdminFooterComponent } from './components/admin/admin-footer/admin-footer.component';
+import { AdminMovieFormComponent } from './components/admin/admin-movie-form/admin-movie-form.component';
+import { AdminUserFormComponent } from './components/admin/admin-user-form/admin-user-form.component';
+
+/* Admin views */
+import { AdminHomeComponent} from './views/admin/home/home.component';
+import { AdminMoviesComponent } from './views/admin/admin-movies/admin-movies.component';
+import { AdminMovieEditComponent } from './views/admin/admin-movie-edit/admin-movie-edit.component';
+import { AdminMovieCreateComponent } from './views/admin/admin-movie-create/admin-movie-create.component';
+import { AdminUsersComponent } from './views/admin/admin-users/admin-users.component';
+import { AdminUserCreateComponent } from './views/admin/admin-user-create/admin-user-create.component';
+import { AdminUserEditComponent } from './views/admin/admin-user-edit/admin-user-edit.component';
 
 @NgModule({
   declarations: [
@@ -48,12 +59,23 @@ import { AdminFooterComponent } from './components/admin/admin-footer/admin-foot
     LoginFormComponent,
     SignupFormComponent,
 
+    /* Admin components */
     NavbarComponent,
     BreadcrumbComponent,
     ToolbarComponent,
-    AdminHomeComponent,
     LogoutModalComponent,
     AdminFooterComponent,
+    AdminMovieFormComponent,
+    AdminUserFormComponent,
+
+    /* Admin views */
+    AdminHomeComponent,
+    AdminMoviesComponent,
+    AdminMovieEditComponent,
+    AdminMovieCreateComponent,
+    AdminUsersComponent,
+    AdminUserCreateComponent,
+    AdminUserEditComponent,
   ],
   imports: [
     BrowserModule,

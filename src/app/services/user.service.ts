@@ -11,7 +11,7 @@ export class UserService extends ApiService {
     return this.post(`${BASE_URI}/ThemNguoiDung`, user);
   }
 
-  categories() {
+  roles() {
     return this.get(`${BASE_URI}/LayDanhSachLoaiNguoiDung`);
   }
 
@@ -19,11 +19,18 @@ export class UserService extends ApiService {
     return this.get(`${BASE_URI}/LayDanhSachNguoiDung?MaNhom=GP01`);
   }
 
-  update() {
-    //
+  async getUserByUsername(username) {
+    const users = await this.list();
+    const foundUser = users.find(({ TaiKhoan }) => TaiKhoan === username);
+
+    return foundUser;
   }
 
-  deleteUser() {
-    //
+  update(user) {
+    return this.post(`${BASE_URI}/CapNhatThongTin`, user);
+  }
+
+  deleteUser(username) {
+    return this.delete(`${BASE_URI}/XoaNguoiDung?TaiKhoan=${username}`);
   }
 }
