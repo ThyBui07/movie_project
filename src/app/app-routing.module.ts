@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AdminGuard } from './guards/admin.guard';
+import { UserGuard } from './guards/user.guard';
 
 import { HomeComponent } from './views/home/home.component';
 import { MoviesComponent } from './views/movies/movies.component';
@@ -14,13 +15,14 @@ import { BookingComponent } from './views/booking/booking.component';
 import { AdminHomeComponent } from './views/admin/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'movies', component: MoviesComponent },
-  { path: 'movies/:id', component: MovieDetailComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'news', component: NewsComponent },
-  { path: 'booking/:id', component: BookingComponent },
+  { path: '', component: HomeComponent, canActivate: [UserGuard] },
+  { path: 'movies', component: MoviesComponent, canActivate: [UserGuard] },
+  { path: 'movies/:id', component: MovieDetailComponent, canActivate: [UserGuard] },
+  { path: 'about', component: AboutComponent, canActivate: [UserGuard] },
+  { path: 'contact', component: ContactComponent, canActivate: [UserGuard] },
+  { path: 'news', component: NewsComponent, canActivate: [UserGuard] },
+  { path: 'booking/:id', component: BookingComponent, canActivate: [UserGuard] },
+
   { path: 'admin/home', component: AdminHomeComponent, canActivate: [AdminGuard] },
 
   { path: '**', redirectTo: '' },
