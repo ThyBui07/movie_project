@@ -1,17 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-// import { MovieService } from '../../services/movie.service';
 import { MovieService } from '@services/movie.service';
-import { UsersService } from '@services/users.service';
 
 @Component({
-  selector: 'movies-view',
   templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.scss']
 })
 export class MoviesComponent implements OnInit {
-  movies: Object = [];
+  movies: any = [];
 
-  constructor(private movieService: MovieService, private userService: UsersService) { }
+  constructor(private movieService: MovieService) { }
 
   ngOnInit() {
     this.getList();
@@ -22,9 +18,6 @@ export class MoviesComponent implements OnInit {
       this.movies = res;
       console.log(res);
     });
-    // this.userService.list().then((res) => {
-    //   console.log(res);
-    // });
   }
 
 }

@@ -3,18 +3,11 @@ import { Router } from '@angular/router';
 import { AuthenticationService } from '@services/authentication.service';
 
 @Component({
-  selector: 'header-component',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'admin-logout-modal-component',
+  templateUrl: './logout-modal.component.html',
 })
-export class HeaderComponent implements OnInit {
-  currentUser: any;
-  navigations: Array<any> = [
-    { text: 'Movies', url: '/movies' },
-    { text: 'News', url: '/news' },
-    { text: 'About', url: '/about' },
-    { text: 'Contact', url: '/contact' }
-  ];
+export class LogoutModalComponent implements OnInit {
+  currentUser: Object;
 
   constructor(
     private router: Router,

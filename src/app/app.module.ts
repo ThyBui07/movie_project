@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 import { APP_BASE_HREF } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -18,8 +19,6 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
 import { MovieDetailComponent } from './views/movie-detail/movie-detail.component';
 import { BookingComponent } from './views/booking/booking.component';
 import { MovieSeatComponent } from './components/movie-seat/movie-seat.component';
-import { FormComponent } from './views/form/form.component';
-import { RegisterFormComponent } from './views/register-form/register-form.component';
 import { LoginFormComponent } from './components/header/login-form/login-form.component';
 import { SignupFormComponent } from './components/header/signup-form/signup-form.component';
 
@@ -27,6 +26,8 @@ import { NavbarComponent } from './components/admin/navbar/navbar.component';
 import { BreadcrumbComponent } from './components/admin/breadcrumb/breadcrumb.component';
 import { ToolbarComponent } from './components/admin/toolbar/toolbar.component';
 import { AdminHomeComponent} from './views/admin/home/home.component';
+import { LogoutModalComponent } from './components/admin/logout-modal/logout-modal.component';
+import { AdminFooterComponent } from './components/admin/admin-footer/admin-footer.component';
 
 @NgModule({
   declarations: [
@@ -44,8 +45,6 @@ import { AdminHomeComponent} from './views/admin/home/home.component';
     MovieDetailComponent,
     BookingComponent,
     MovieSeatComponent,
-    FormComponent,
-    RegisterFormComponent,
     LoginFormComponent,
     SignupFormComponent,
 
@@ -53,9 +52,12 @@ import { AdminHomeComponent} from './views/admin/home/home.component';
     BreadcrumbComponent,
     ToolbarComponent,
     AdminHomeComponent,
+    LogoutModalComponent,
+    AdminFooterComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
   ],
