@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MovieService } from '@services/movie.service';
-import { ConsoleReporter } from 'jasmine';
 
 @Component({
   selector: 'app-booking',
@@ -21,13 +20,13 @@ export class BookingComponent implements OnInit {
   }
 
   async getSeatList() {
-    const id = this.activatedRoute.snapshot.paramMap.get('id');
+    /* const id = this.activatedRoute.snapshot.paramMap.get('id');
 
     const seatsRes = await this.movieService.seatById(id);
     this.seats = seatsRes.DanhSachGhe;
     console.log(this.seats);
 
-    this.movie = await this.movieService.movieById(id);
+    this.movie = await this.movieService.movieById(id); */
 
     /* await this.movieService.seatById(id).then((res: {DanhSachGhe: any}) => {
       console.log(res.DanhSachGhe);

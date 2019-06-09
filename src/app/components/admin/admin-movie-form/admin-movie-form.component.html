@@ -1,0 +1,28 @@
+<div class="panel panel-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+<form #movieForm="ngForm" (ngSubmit)="save()" role="form">
+  <div class="form-group" [ngClass]="title.untouched ? '' : (title.valid) ? 'has-success' : 'has-error'">
+    <label>Title</label>
+    <input class="form-control" name="title" #title="ngModel" [(ngModel)]="movie.TenPhim" required>
+    <div class="panel panel-danger" *ngIf="title.errors && title.touched">Please input title</div>
+  </div>
+  <!-- <div class="form-group">
+    <label>Poster</label>
+    <input type="file" class="form-control">
+  </div> -->
+  <div class="form-group">
+    <label>Desscription</label>
+    <textarea class="form-control" name="desscription" rows="5" [(ngModel)]="movie.MoTa"></textarea>
+  </div>
+  <div class="form-group">
+    <label>Premiere Date</label>
+    <input type="date" class="form-control" name="premiere" [(ngModel)]="movie.NgayKhoiChieu">
+  </div>
+  <div class="form-group">
+    <label>Trailer</label>
+    <input class="form-control" name="trailer" [(ngModel)]="movie.Trailer">
+  </div>
+  <button type="button" class="btn btn-success" [disabled]="movieForm.form.invalid" (click)="save()">
+    Save <i class="far fa-save"></i>
+  </button>
+</form>

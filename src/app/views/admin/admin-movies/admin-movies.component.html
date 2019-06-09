@@ -1,0 +1,61 @@
+<div class="card mb-3">
+  <div>
+    <a class="btn btn-success" routerLink="/admin/movie/create">
+      <i class="fas fa-plus"></i> Add new movie
+    </a>
+  </div>
+  <div class="card-header">
+    <i class="fas fa-table"></i> List of movies
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Poster</th>
+            <th>Premiere Date</th>
+            <th>Description</th>
+            <th>Trailer</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Poster</th>
+            <th>Premiere Date</th>
+            <th>Description</th>
+            <th>Trailer</th>
+            <th>Actions</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr *ngFor="let movie of movies">
+            <td>{{ movie.MaPhim }}</td>
+            <td style="width: 150px">{{ movie.TenPhim }}</td>
+            <td style="width: 200px">
+              <img [src]="movie.HinhAnh" [alt]="movie.TenPhim" width="200">
+            </td>
+            <td>{{ movie.NgayKhoiChieu | date : 'dd/MM/yyyy' }}</td>
+            <td style="width: 300px">{{ movie.MoTa }}</td>
+            <td>
+              <a [href]="movie.Trailer" target="_blank">Trailer</a>
+            </td>
+            <td>
+              <a class="btn btn-primary" title="Edit" [routerLink]="'/admin/movie/edit/' + movie.MaPhim">
+                <i class="far fa-edit"></i>
+              </a>
+              &nbsp;
+              <button class="btn btn-danger" title="Delete" (click)="delete(movie)">
+                <i class="far fa-trash-alt"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

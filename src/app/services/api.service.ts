@@ -1,13 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
   BASE_URL = 'http://svcy2.myclass.vn/api';
 
-  constructor(private http: HttpClient) { }
+  protected currentUserSubject: BehaviorSubject<any>;
+  currentUser: Observable<any>;
+
+  constructor(private http: HttpClient) {
+    this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(localStorage.getItem('currentUser')));
+    this.currentUser = this.currentUserSubject.asObservable();
+  }
 
   get(uri) {
     return this.http.get(`${this.BASE_URL}/${uri}`).toPromise();

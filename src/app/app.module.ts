@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 import { APP_BASE_HREF } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -18,15 +19,26 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
 import { MovieDetailComponent } from './views/movie-detail/movie-detail.component';
 import { BookingComponent } from './views/booking/booking.component';
 import { MovieSeatComponent } from './components/movie-seat/movie-seat.component';
-import { FormComponent } from './views/form/form.component';
-import { RegisterFormComponent } from './views/register-form/register-form.component';
 import { LoginFormComponent } from './components/header/login-form/login-form.component';
 import { SignupFormComponent } from './components/header/signup-form/signup-form.component';
 
+/* Admin components */
 import { NavbarComponent } from './components/admin/navbar/navbar.component';
 import { BreadcrumbComponent } from './components/admin/breadcrumb/breadcrumb.component';
 import { ToolbarComponent } from './components/admin/toolbar/toolbar.component';
+import { LogoutModalComponent } from './components/admin/logout-modal/logout-modal.component';
+import { AdminFooterComponent } from './components/admin/admin-footer/admin-footer.component';
+import { AdminMovieFormComponent } from './components/admin/admin-movie-form/admin-movie-form.component';
+import { AdminUserFormComponent } from './components/admin/admin-user-form/admin-user-form.component';
+
+/* Admin views */
 import { AdminHomeComponent} from './views/admin/home/home.component';
+import { AdminMoviesComponent } from './views/admin/admin-movies/admin-movies.component';
+import { AdminMovieEditComponent } from './views/admin/admin-movie-edit/admin-movie-edit.component';
+import { AdminMovieCreateComponent } from './views/admin/admin-movie-create/admin-movie-create.component';
+import { AdminUsersComponent } from './views/admin/admin-users/admin-users.component';
+import { AdminUserCreateComponent } from './views/admin/admin-user-create/admin-user-create.component';
+import { AdminUserEditComponent } from './views/admin/admin-user-edit/admin-user-edit.component';
 
 @NgModule({
   declarations: [
@@ -44,18 +56,30 @@ import { AdminHomeComponent} from './views/admin/home/home.component';
     MovieDetailComponent,
     BookingComponent,
     MovieSeatComponent,
-    FormComponent,
-    RegisterFormComponent,
     LoginFormComponent,
     SignupFormComponent,
 
+    /* Admin components */
     NavbarComponent,
     BreadcrumbComponent,
     ToolbarComponent,
+    LogoutModalComponent,
+    AdminFooterComponent,
+    AdminMovieFormComponent,
+    AdminUserFormComponent,
+
+    /* Admin views */
     AdminHomeComponent,
+    AdminMoviesComponent,
+    AdminMovieEditComponent,
+    AdminMovieCreateComponent,
+    AdminUsersComponent,
+    AdminUserCreateComponent,
+    AdminUserEditComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
   ],

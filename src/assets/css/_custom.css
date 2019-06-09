@@ -1,0 +1,12 @@
+.has-success label {
+    color: #3c763d;
+}
+.has-error label, .panel-danger {
+    color: #a94442;
+}
+.has-success input {
+    border-color: #3c763d;
+}
+.has-error input {
+    border-color: #a94442;
+}
