@@ -37,7 +37,7 @@
             <td>{{ movie.MaPhim }}</td>
             <td style="width: 150px">{{ movie.TenPhim }}</td>
             <td style="width: 200px">
-              <img [src]="movie.HinhAnh" [alt]="movie.TenPhim" width="200">
+              <img imagePreload [src]="movie.HinhAnh" [alt]="movie.TenPhim" width="200">
             </td>
             <td>{{ movie.NgayKhoiChieu | date : 'dd/MM/yyyy' }}</td>
             <td style="width: 300px">{{ movie.MoTa }}</td>

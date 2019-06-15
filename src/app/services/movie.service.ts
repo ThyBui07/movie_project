@@ -47,6 +47,14 @@ export class MovieService extends ApiService {
     return this.post(`${BASE_URI}/CapNhatPhim`, movie);
   }
 
+  uploadFile(file, movieName) {
+    const formData = new FormData();
+    formData.append('Files', file);
+    formData.append('TenPhim', movieName);
+
+    return this.post(`${BASE_URI}/UploadFile`, formData);
+  }
+
   deleteMovie(id) {
     return this.delete(`${BASE_URI}/XoaPhim?MaPhim=${id}`);
   }
