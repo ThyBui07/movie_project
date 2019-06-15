@@ -28,6 +28,6 @@ export class AdminMovieFormComponent implements OnInit {
     if (this.file) {
       await this.movieService.uploadFile(this.file, this.movie.TenPhim);
     }
-    this.submit.emit(this.file);
+    this.submit.emit();
   }
 }
