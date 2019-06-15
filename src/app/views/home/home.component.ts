@@ -18,11 +18,13 @@ export class HomeComponent implements OnInit {
   getList(){
     this.movieService.list().then((res) => {
       this.movies = res;
-      this.movies.forEach((movie: { HinhAnh: string; TenPhim: string; }) =>{
+      console.log(res);
+      this.movies.forEach((movie: { HinhAnh: string; TenPhim: string; MaPhim: string; }) =>{
         this.sliders.push({
           name: movie.TenPhim,
           backgroundImage: `url(${movie.HinhAnh})`, //nối chuỗi
           image: movie.HinhAnh,
+          code: movie.MaPhim,
         })
       });
       console.log(this.sliders);

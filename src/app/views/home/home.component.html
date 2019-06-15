@@ -43,13 +43,18 @@
 <div class="top-content">
     <div class="container-fluid">
         <div id="carousel-example" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div class="carousel-inner row w-100 mx-auto" role="listbox" style="padding-top: 70px;">
                 <div
                     *ngFor = "let slider of sliders; let i = index"
                     [ngClass]="{'active': i === 0 }"
                     class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3"
+
                 >
-                    <img [src]="slider.image" class="img-fluid mx-auto d-block" alt="img1">
+                    <img [src]="slider.image" class="img-fluid mx-auto d-block" alt="img1" [routerLink] ="'/movies/' + slider.code" style="cursor:pointer">
+                    <!-- <h1>{{ slider.name }}</h1> -->
+                    <div class="overlay">
+                        <div class="text">Hello World</div>
+                    </div>
                 </div>
                 <!-- <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-3">
                     <img src="http://placehold.it/800x600/f44242/fff" class="img-fluid mx-auto d-block" alt="img2">
