@@ -6,6 +6,7 @@ import { MovieService } from '@services/movie.service';
   templateUrl: './admin-movie-form.component.html',
 })
 export class AdminMovieFormComponent implements OnInit {
+  file: File;
   roles = [];
 
   @Input() movie: any = {};
@@ -19,7 +20,14 @@ export class AdminMovieFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  save() {
-    this.submit.emit(this.movie);
+  fileOnChange(event: any) {
+    this.file = event.dataTransfer ? event.dataTransfer.files[0] : event.target.files[0];
+  }
+
+  async save() {
+    if (this.file) {
+      await this.movieService.uploadFile(this.file, this.movie.TenPhim);
+    }
+    this.submit.emit();
   }
 }

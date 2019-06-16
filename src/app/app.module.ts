@@ -39,6 +39,10 @@ import { AdminMovieCreateComponent } from './views/admin/admin-movie-create/admi
 import { AdminUsersComponent } from './views/admin/admin-users/admin-users.component';
 import { AdminUserCreateComponent } from './views/admin/admin-user-create/admin-user-create.component';
 import { AdminUserEditComponent } from './views/admin/admin-user-edit/admin-user-edit.component';
+import { AdminFileUploaderComponent } from './components/admin/admin-file-uploader/admin-file-uploader.component';
+
+/* Directives */
+import { ImagePreloadDirective } from './directives/image-preload.directive';
 
 @NgModule({
   declarations: [
@@ -76,6 +80,10 @@ import { AdminUserEditComponent } from './views/admin/admin-user-edit/admin-user
     AdminUsersComponent,
     AdminUserCreateComponent,
     AdminUserEditComponent,
+    AdminFileUploaderComponent,
+
+    /* Directives */
+    ImagePreloadDirective,
   ],
   imports: [
     BrowserModule,

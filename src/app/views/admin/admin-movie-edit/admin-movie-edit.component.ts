@@ -29,6 +29,12 @@ export class AdminMovieEditComponent implements OnInit {
   async getMovie() {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
     const movie = await this.movieService.movieById(id);
+
+    const endOfString = movie.HinhAnh.slice(-1);
+    if (endOfString === '.') {
+      movie.HinhAnh += 'jpg';
+    }
+
     if (movie.NgayKhoiChieu) {
       movie.NgayKhoiChieu = movie.NgayKhoiChieu.slice(0, 10);
     }
